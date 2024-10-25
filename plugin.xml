@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="net.disy.cm.zip"
+    version="1.0.4">
+    <name>GTMZipUtilsPlugin</name>
+    <description>disy zip plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>zip</keywords>
+
+  <js-module src="www/GTMZipUtilsPlugin.js" name="GTMZipUtilsPlugin">
+    <clobbers target="cordova.plugins.GTMZipUtilsPlugin" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="GTMZipUtilsPlugin">
+        <param name="android-package" value="net.disy.gisterm.mobile.plugin.GTMZipUtilsPlugin" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <!-- <source-file src="src/android/net/disy/gisterm/mobile/plugin/GTMZipUtilsPlugin.java" target-dir="src/net/disy/GTMZipUtilsPlugin" /> -->
+    <!-- <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/ArchiveHandler.java" target-dir="src/net/disy/GTMZipUtilsPlugin" /> -->
+
+
+    <source-file src="src/android/org/apache/commons/compress/changes/ChangeSetResults.java" target-dir="src/org/apache/commons/compress/changes" />
+    <source-file src="src/android/org/apache/commons/compress/changes/Change.java" target-dir="src/org/apache/commons/compress/changes" />
+    <source-file src="src/android/org/apache/commons/compress/changes/package.html" target-dir="src/org/apache/commons/compress/changes" />
+    <source-file src="src/android/org/apache/commons/compress/changes/ChangeSetPerformer.java" target-dir="src/org/apache/commons/compress/changes" />
+    <source-file src="src/android/org/apache/commons/compress/changes/ChangeSet.java" target-dir="src/org/apache/commons/compress/changes" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ArchiveException.java" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ArchiveStreamFactory.java" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/Lister.java" target-dir="src/org/apache/commons/compress/archivers/Lister.java" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/GeneralPurposeBit.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnicodePathExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/Zip64Mode.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/AsiExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipConstants.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipEncoding.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipShort.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnixStat.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnsupportedZipFeatureException.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipEncodingHelper.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/Zip64ExtendedInformationExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnrecognizedExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipEightByteInteger.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/Simple8BitZipEncoding.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipLong.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/FallbackZipEncoding.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/NioZipEncoding.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipUtil.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/package.html" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/JarMarker.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnparseableExtraFieldData.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ExtraFieldUtils.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipFile.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/AbstractUnicodeExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/UnicodeCommentExtraField.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/zip/Zip64RequiredException.java" target-dir="src/org/apache/commons/compress/archivers/zip" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/package.html" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/CpioArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/CpioConstants.java" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/CpioUtil.java" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/CpioArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/cpio/CpioArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers/cpio" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveUtil.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveSummary.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/package.html" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveException.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/UnrecognizedFormatException.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/Dirent.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/ShortFileException.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/UnsupportedCompressionAlgorithmException.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/InvalidFormatException.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/TapeInputStream.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/dump/DumpArchiveConstants.java" target-dir="src/org/apache/commons/compress/archivers/dump" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/package.html" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarConstants.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarBuffer.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarArchiveSparseEntry.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/package.html" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarUtils.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/tar/TarArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/tar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/jar/JarArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/jar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/jar/JarArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers/jar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/jar/package.html" target-dir="src/org/apache/commons/compress/archivers/jar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/jar/JarArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/jar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ar/ArArchiveEntry.java" target-dir="src/org/apache/commons/compress/archivers/ar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ar/ArArchiveInputStream.java" target-dir="src/org/apache/commons/compress/archivers/ar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ar/package.html" target-dir="src/org/apache/commons/compress/archivers/ar" />
+    <source-file src="src/android/org/apache/commons/compress/archivers/ar/ArArchiveOutputStream.java" target-dir="src/org/apache/commons/compress/archivers/ar" />
+    <source-file src="src/android/org/apache/commons/compress/utils/Charsets.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/ArchiveUtils.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/CountingInputStream.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/IOUtils.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/package.html" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/CharsetNames.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/org/apache/commons/compress/utils/CountingOutputStream.java" target-dir="src/org/apache/commons/compress/utils" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/ArchiveHandler.java" target-dir="src/net/disy/gisterm/mobile/plugin/archiving" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/TarArchiveHandler.java" target-dir="src/net/disy/gisterm/mobile/plugin/archiving" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/ZipArchiveHandler.java" target-dir="src/net/disy/gisterm/mobile/plugin/archiving" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/ArchiveType.java" target-dir="src/net/disy/gisterm/mobile/plugin/archiving" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/archiving/ArchiveProcessingException.java" target-dir="src/net/disy/gisterm/mobile/plugin/archiving" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/Ensure.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/ArchiveUtils.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/IOUtils.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/FileUtils.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/FilenameUtils.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/util/JsonUtils.java" target-dir="src/net/disy/gisterm/mobile/plugin/util" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/ui/ProgressMonitor.java" target-dir="src/net/disy/gisterm/mobile/plugin/ui" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/ui/JavascriptProgressMonitor.java" target-dir="src/net/disy/gisterm/mobile/plugin/ui" />
+    <source-file src="src/android/net/disy/gisterm/mobile/plugin/GTMZipUtilsPlugin.java" target-dir="src/net/disy/gisterm/mobile/plugin" />
+
+
+
+  </platform>
+
+    <!-- ios -->
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+          <feature name="GTMZipUtilsPlugin">
+            <param name="ios-package" value="GTMZipUtilsPlugin" onload="true"/>
+          </feature>
+        </config-file>
+
+        <header-file src="src/ios/GTMZipUtilsPlugin.h" />
+        <source-file src="src/ios/GTMZipUtilsPlugin.m" compiler-flags="-fno-objc-arc"/>
+
+        <header-file src="src/ios/lib/Ensure.h" target-dir="lib"/>
+        <source-file src="src/ios/lib/Ensure.m" target-dir="lib"/>
+
+        <header-file src="src/ios/lib/MiniZip/crypt.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/MiniZip/ioapi.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/MiniZip/mztools.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/MiniZip/unzip.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/MiniZip/zip.h" target-dir="lib"/>
+
+        <header-file src="src/ios/lib/Objective-Zip/FileInZipInfo.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/Objective-Zip/ZipException.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/Objective-Zip/ZipFile.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/Objective-Zip/ZipReadStream.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/Objective-Zip/ZipWriteStream.h" target-dir="lib"/>
+
+        <source-file src="src/ios/lib/Objective-Zip/FileInZipInfo.m" target-dir="lib" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/lib/Objective-Zip/ZipException.m" target-dir="lib"/>
+        <source-file src="src/ios/lib/Objective-Zip/ZipFile.m" target-dir="lib" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/lib/Objective-Zip/ZipReadStream.m" target-dir="lib" compiler-flags="-fno-objc-arc"/>
+        <source-file src="src/ios/lib/Objective-Zip/ZipWriteStream.m" target-dir="lib" compiler-flags="-fno-objc-arc"/>
+
+        <header-file src="src/ios/lib/ZLib/crc32.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/deflate.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/inffast.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/inffixed.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/inflate.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/inftrees.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/trees.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/zconf.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/zlib.h" target-dir="lib"/>
+        <header-file src="src/ios/lib/ZLib/zutil.h" target-dir="lib"/>
+
+        <header-file src="src/ios/lib/tarlight/NSFileManager+Tar.h" target-dir="lib"/>
+
+        <source-file src="src/ios/lib/tarlight/NSFileManager+Tar.m" target-dir="lib" compiler-flags="-fno-objc-arc"/>
+
+        <source-file src="src/ios/lib/ZLib/adler32.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/compress.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/crc32.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/deflate.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/gzio.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/infback.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/inffast.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/inflate.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/inftrees.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/trees.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/uncompr.c" target-dir="lib" />
+        <source-file src="src/ios/lib/ZLib/zutil.c" target-dir="lib" />
+
+        <source-file src="src/ios/lib/MiniZip/ioapi.c" target-dir="lib" />
+        <source-file src="src/ios/lib/MiniZip/mztools.c" target-dir="lib" />
+        <source-file src="src/ios/lib/MiniZip/unzip.c" target-dir="lib" />
+        <source-file src="src/ios/lib/MiniZip/zip.c" target-dir="lib" />
+
+    </platform>
+
+</plugin>
