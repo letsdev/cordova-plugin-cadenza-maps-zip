@@ -239,7 +239,11 @@ public class GTMZipUtilsPlugin extends CordovaPlugin {
 
 
 			// ProgressMonitor progressMonitor = new JavascriptProgressMonitor(cordova, archiveFile.getName());
-			ProgressMonitor progressMonitor = new JavascriptProgressMonitor((CordovaActivity)this.cordova.getActivity(), archiveFile.getName());
+            CordovaActivity cordovaActivity = null;
+            if (this.cordova.getActivity() instanceof CordovaActivity) {
+                cordovaActivity = (CordovaActivity)this.cordova.getActivity();
+            }
+            ProgressMonitor progressMonitor = new JavascriptProgressMonitor(cordovaActivity, archiveFile.getName());
 
 			int extractedFilesCount = archiveHandler.unpack(progressMonitor, archiveFile, tempDirectory);
 			boolean renameSucceeded = tempDirectory.renameTo(destinationDirectory);
